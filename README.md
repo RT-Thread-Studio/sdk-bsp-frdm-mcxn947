@@ -1,0 +1,1 @@
+# sdk-bsp-frdm-mcxn947
