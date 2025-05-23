@@ -1,0 +1,39 @@
+mainmenu "RT-Thread Configuration"
+
+config BSP_DIR
+    string
+    option env="BSP_ROOT"
+    default "."
+
+config RTT_DIR
+    string
+    option env="RTT_ROOT"
+    default "rt-thread"
+
+PKGS_DIR := packages
+
+config PKGS_DIR
+    string
+    option env="PKGS_ROOT"
+    default "packages"
+
+config ENV_DIR
+    string
+    option env="ENV_ROOT"
+    default "/"
+
+config SOC_MCX
+    bool
+    select ARCH_ARM_CORTEX_M33
+    select ARCH_ARM_CORTEX_SECURE
+    default y
+
+config PLATFORM_DIR
+    string
+    option env="PLATFORM_DIR"
+    default "C:/Users/RTT/AppData/Local/RT-ThreadStudio/workspace/mcxn947_basic_rtc/platform"
+
+source "$RTT_DIR/Kconfig"
+source "$PKGS_DIR/Kconfig"
+source "libraries/Kconfig"
+source "$BSP_DIR/board/Kconfig"
