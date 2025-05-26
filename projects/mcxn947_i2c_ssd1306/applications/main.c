@@ -17,9 +17,6 @@
 #include "drv_pin.h"
 
 #define LEDB_PIN        ((1*32)+2)
-#define BUTTON_PIN      ((0*32)+23)
-
-static void sw_pin_cb(void *args);
 
 int main(void)
 {
@@ -35,12 +32,7 @@ int main(void)
 
     rt_pin_mode(LEDB_PIN, PIN_MODE_OUTPUT);  /* Set GPIO as Output */
 
-    rt_pin_mode(BUTTON_PIN, PIN_MODE_INPUT_PULLUP);
-    rt_pin_attach_irq(BUTTON_PIN, PIN_IRQ_MODE_FALLING, sw_pin_cb, RT_NULL);
-    rt_pin_irq_enable(BUTTON_PIN, 1);
-
     rt_kprintf("MCXN947 Hello\n");
-
 
 #ifdef RT_USING_SDIO
     rt_thread_mdelay(2000);
@@ -62,10 +54,4 @@ int main(void)
         rt_thread_mdelay(500);               /* Delay 500mS */
     }
 }
-
-static void sw_pin_cb(void *args)
-{
-    rt_kprintf("sw pressed\r\n");
-}
-
 // end file
