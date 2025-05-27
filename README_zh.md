@@ -45,7 +45,7 @@ $ sdk-bsp-frdm-mcxn947
 
 `sdk-bsp-frdm-mcxn947` 支持 **RT-Thread Studio** 和 **MDK** 开发方式
 
-## **RT-Thread Studio 开发步骤**
+## RT-Thread Studio 开发步骤
 
 1. 打开RT-Thread Studio ，安装 FRDM-MCXN947 开发板支持包（如有最新建议安装最新版本，下图版本仅供参考）
 
