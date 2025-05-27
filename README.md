@@ -41,11 +41,11 @@ $ sdk-bsp-frdm-mcxn947
 - projects：The sample project folder contains template projects and some sample projects.
 - rt-thread： Source code of RT-Thread.
 
-## 使用方式
+## Usage
 
 `sdk-bsp-frdm-mcxn947` supports **RT-Thread Studio** and **MDK** development methods.
 
-## **RT-Thread Studio **Development Steps
+## RT-Thread Studio Development Steps
 
 1. Open RT-Thread Studio and install the FRDM-MCXN947 support package (if a newer version is available, it is recommended to install the latest version; the version shown in the image is for reference only).
 
