@@ -187,12 +187,12 @@ static rt_err_t mcx_drv_pwm_get(mcx_pwm_obj_t *pwm, struct rt_pwm_configuration 
 {
     if (mcx_pwm_period_get(pwm, &configuration->period) < 0)
     {
-        return -EFAULT;
+        return -EINVAL;
     }
 
     if (mcx_pwm_pulse_get(pwm, configuration->channel, &configuration->pulse) < 0)
     {
-        return -EFAULT;
+        return -EINVAL;
     }
 
     return RT_EOK;
